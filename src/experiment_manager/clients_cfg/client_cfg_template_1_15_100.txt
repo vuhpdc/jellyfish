@@ -1,0 +1,1 @@
+host_0 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 15

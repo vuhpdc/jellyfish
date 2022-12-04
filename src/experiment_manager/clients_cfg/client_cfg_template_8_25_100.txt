@@ -1,0 +1,8 @@
+host_0 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 25
+host_1 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 25
+host_2 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 25
+host_3 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 25
+host_4 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 25
+host_5 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 25
+host_6 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 25
+host_7 client_ip client_ssh_port client_network_iface client_username /home/client_username/jellyfish/ 100 25

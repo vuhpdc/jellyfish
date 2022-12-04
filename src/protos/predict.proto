@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package model_serving;
+
+service ModelServing {
+  rpc predict(stream PredictRequest) returns (stream PredictResponse) {}
+  rpc predict_ack(ClientToken) returns (stream PredictRequestAck) {}
+  rpc register(RegisterRequest) returns (RegisterResponse) {}
+  rpc unregister(ClientToken) returns (Empty) {}
+}
+
+message ClientToken { uint64 client_id = 1; }
+
+message ClientInfo {
+  uint64 slo = 1;
+  uint64 frame_rate = 2;
+  float init_bw = 3;
+  float lat_wire = 4;
+}
+
+message RegisterRequest {
+  ClientInfo client_info = 1;
+}
+
+message RegisterResponse {
+  ClientToken client_token = 1;
+  int64 model_number = 2;
+}
+
+message FrameMeta { 
+  uint64 frame_id = 1; 
+  int64 desired_model = 2;
+  double send_timestamp = 3; 
+  double bw = 4;
+}
+
+message FrameData { bytes img = 1; }
+
+message DetectionMeta { 
+  int64 used_model = 1; 
+  double send_timestamp = 2; 
+  int64 next_model = 3;
+}
+
+message PredictRequest {
+  ClientToken client_token = 1;
+  FrameMeta frame_meta = 2;
+  FrameData frame_data = 3;
+}
+
+message PredictResponse {
+  ClientToken client_token = 1;
+  FrameMeta frame_meta = 2;
+  DetectionMeta det_meta = 3;
+  bytes data = 4;
+}
+
+message PredictRequestAck {
+  ClientToken client_token = 1;
+  uint64 frame_id = 2;
+  double server_recv_req_ts = 3;
+  double server_send_ack_ts = 4;
+}
+
+message Empty {}

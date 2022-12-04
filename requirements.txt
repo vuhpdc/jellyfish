@@ -1,0 +1,10 @@
+requests==2.25.1
+grpcio==1.38.1
+grpcio-tools==1.38.1
+numpy==1.19.5
+pandas==1.1.5
+torch==1.9.0
+opencv-python
+matplotlib==3.3.4
+docplex==2.22.213
+docloud
