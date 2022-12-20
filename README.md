@@ -2,7 +2,7 @@
 
 Jellyfish is a soft real-time inference serving system targeting the dynamic mobile edge environment. Mobile devices running DNN-based applications offload DNN inference to an edge platform equipped with high-end GPUs over a dynamic network. Jellyfish aims to ensure end-to-end latency service-level objective (SLO) for inference requests, while maximizing the inference accuracy. 
 
-A paper describing the Clownfish design and implementation is published at RTSS 2022 and is available [here](https://research.vu.nl/en/publications/jellyfish-timely-inference-serving-for-dynamic-edge-networks).
+A paper describing the Jellyfish design and implementation is published at RTSS 2022 and is available [here](https://research.vu.nl/en/publications/jellyfish-timely-inference-serving-for-dynamic-edge-networks).
 
 ```bib
 @inproceedings{nigade2022jellyfish,
